@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 2025 | Your Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+           :root {
+            --primary: #4a6cff;
+            --primary-light: #eef1ff;
+            --secondary: #ff6b6b;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --bg: #ffffff;
+            --bg-light: #f9fafb;
+            --border: #e0e0e0;
+            --success: #00b894;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(74, 108, 255, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+               font-family: 'Lexend Deca', 'Helvetica Neue', Helvetica, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 40px;
+            margin-right: 10px;
+            background-color: #5b37eb;
+            width: 40px;
+            border-radius: 8px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #5b37eb;
+        }
+
+        .mobile-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background: linear-gradient(135deg, #6e45e2, #88d3ce);
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='pattern' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'%3E%3Crect width='100%25' height='100%25' fill='none'/%3E%3Ccircle cx='20' cy='20' r='1' fill='white' opacity='0.2'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23pattern)'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards 0.3s;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards 0.5s;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #5b37eb;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards 0.7s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+       
+
+        .hero-graphics {
+            position: absolute;
+            right: -5%;
+            bottom: -10%;
+            width: 60%;
+            height: 80%;
+            opacity: 0;
+            animation: slideIn 1.2s ease forwards 0.8s;
+        }
+
+        .hero-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            bottom: -150px;
+            right: 10%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-circle:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 20%;
+            right: 20%;
+            animation: float 12s ease-in-out infinite 1s;
+        }
+
+        .hero-circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            top: 40%;
+            right: 35%;
+            animation: float 10s ease-in-out infinite 2s;
+        }
+
+        /* Features Section */
+    .features {
+      padding: 100px 20px;
+      background-color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .feature-card.animate {
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      background-color: #f3f0ff; /* Light fade purple */
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #5b37eb;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Animation */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Optional: stagger delay */
+    .feature-card:nth-child(1) { animation-delay: 0.1s; }
+    .feature-card:nth-child(2) { animation-delay: 0.2s; }
+    .feature-card:nth-child(3) { animation-delay: 0.3s; }
+    .feature-card:nth-child(4) { animation-delay: 0.4s; }
+    .feature-card:nth-child(5) { animation-delay: 0.5s; }
+    .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+    /* Responsive tweak */
+    @media (max-width: 768px) {
+      .section-title h2 {
+        font-size: 2rem;
+      }
+    }
+
+        /* Sponsors/Logos Section */
+   .sponsors {
+  padding: 80px 0;
+  background-color: #f1f1f1;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Reduced gap for mobile friendliness */
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.sponsor-logo {
+  height: 60px;
+  width: 120px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  flex: 1 1 100px; /* Allow auto-resize based on screen width */
+  max-width: 140px; /* Avoid too large on large screens */
+}
+
+.sponsor-logo.animate {
+  animation: slideUpFade 0.6s ease forwards;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Responsive Enhancements */
+@media (max-width: 768px) {
+  .sponsor-logo {
+    width: 100px;
+    height: 50px;
+    flex: 1 1 80px;
+  }
+
+  .sponsors-grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsors-grid {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sponsor-logo {
+    width: 80px;
+    height: 45px;
+    flex: 1 1 60px;
+  }
+}
+
+
+        /* Registration Form Section */
+      .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--primary), #8c5bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        .registration {
+            padding: 80px 0;
+        }
+
+        .form-container {
+            background-color: var(--bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin: 0 auto;
+            max-width: 720px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s 0.3s forwards;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            background-color: var(--bg);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(74, 108, 255, 0.1);
+            outline: none;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+        .checkbox-group label {
+            position: relative;
+            padding-left: 32px;
+            cursor: pointer;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        
+        .checkbox-group label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+        
+        .checkbox-group input:checked + label:before {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .checkbox-group input:checked + label:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 4px;
+            width: 6px;
+            height: 11px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        
+        .checkbox-group input:focus + label:before {
+            box-shadow: 0 0 0 4px rgba(74, 108, 255, 0.1);
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), #8c5bff);
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 32px;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.8s 1.2s forwards;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 108, 255, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .ticket-options {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .ticket-option {
+            flex: 1;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ticket-option.selected {
+            border-color: var(--primary);
+            background-color: var(--primary-light);
+        }
+
+        .ticket-option-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .ticket-name {
+            font-weight: 600;
+        }
+
+        .ticket-price {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .ticket-desc {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .ticket-radio {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 0;
+        }
+
+        .form-col {
+            flex: 1;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 255, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(74, 108, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 255, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 24px;
+            }
+            
+            .ticket-options {
+                flex-direction: column;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Progress steps */
+        .progress-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .progress-container::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--border);
+            z-index: 1;
+        }
+
+        .progress-bar {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), #8c5bff);
+            transition: width 0.3s ease;
+            z-index: 2;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 3;
+        }
+
+        .step-number {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color: var(--bg);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-bottom: 8px;
+            transition: var(--transition);
+        }
+
+        .step.active .step-number {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            animation: pulse 1.5s infinite;
+        }
+
+        .step.completed .step-number {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .step-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .step.active .step-label,
+        .step.completed .step-label {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Form stages */
+        .form-stage {
+            display: none;
+        }
+
+        .form-stage.active {
+            display: block;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .form-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+        }
+
+        .btn-prev {
+            background-color: var(--bg-light);
+            color: var(--text);
+            padding: 12px 24px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-prev:hover {
+            background-color: var(--border);
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, var(--primary), #8c5bff);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 108, 255, 0.3);
+        }
+        
+        .btn-next:active {
+            transform: translateY(0);
+        }
+
+        /* Form success message */
+        .success-message {
+            text-align: center;
+            display: none;
+        }
+
+        .success-message.active {
+            display: block;
+            animation: fadeInScale 0.5s forwards;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        .success-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .success-desc {
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+
+        /* Input animation */
+        .input-group {
+            position: relative;
+        }
+
+        .input-group .form-control {
+            padding: 20px 16px 12px;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 0 4px;
+            background-color: transparent;
+            transition: 0.2s ease all;
+            pointer-events: none;
+            font-weight: 400;
+        }
+
+        .input-group .form-control:focus ~ label,
+        .input-group .form-control:not(:placeholder-shown) ~ label {
+            top: 5px;
+            font-size: 12px;
+            color: var(--primary);
+        }
+   
+
+.countdown {
+  background-color: #5b37eb;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.countdown-value.flip {
+  transform: rotateX(360deg);
+  opacity: 0.6;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #fff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 0.8;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .floating-date {
+                right: 5%;
+                font-size: 1.2rem;
+            }
+            
+            .countdown-value {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: clip-path 0.4s ease;
+            }
+            
+            nav.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 100px 0;
+            }
+            
+            .hero-content {
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .floating-date {
+                position: relative;
+                right: auto;
+                top: auto;
+                margin: 30px auto;
+                display: inline-block;
+            }
+            
+            .countdown-container {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .countdown-value {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            
+            .sponsors-grid {
+                gap: 20px;
+            }
+            
+            .sponsor-logo {
+                height: 50px;
+                width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+        }
+
+         /* Section Title Styles */
+    
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header span {
+      font-size: 1.2rem;
+      color: #ff9500;
+      font-weight: 600;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-top: 0.5rem;
+      color: #2d3436;
+    }
+
+    /* Speakers Grid */
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    /* Speaker Card */
+    .speaker-card {
+      background-color: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .speaker-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .speaker-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Speaker Tag */
+    .speaker-tag {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      background: linear-gradient(135deg, #ffd900, #ff9500);
+      color: #fff;
+      padding: 5px 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 50px 0 0 50px;
+      z-index: 1;
+      box-shadow: -3px 3px 10px rgba(255, 196, 0, 0.3);
+    }
+
+    /* Speaker Image Container */
+    .speaker-image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .speaker-image img {
+      width: 50%;
+      height: auto;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .speaker-card:hover .speaker-image img {
+      transform: scale(1.05);
+    }
+
+    /* Speaker Info */
+    .speaker-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .speaker-info h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 0.3rem;
+    }
+
+    .speaker-info p {
+      font-size: 0.9rem;
+      color: #6c5ce7;
+      margin-bottom: 0.5rem;
+    }
+
+    .speaker-info .company {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .speaker-info .role {
+      display: inline-block;
+      background-color: #f0f0f7;
+      color: #6c5ce7;
+      padding: 5px 12px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 1rem 0;
+      padding: 0.8rem 0;
+      border-top: 1px solid #f0f0f7;
+      border-bottom: 1px solid #f0f0f7;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #f0f0f7;
+      color: #6c5ce7;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background-color: #6c5ce7;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .speakers-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .speakers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1rem;
+      }
+
+      .section-header {
+        margin-bottom: 2.5rem;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .speakers-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .section-header span {
+        font-size: 1rem;
+      }
+
+      .section-header h2 {
+        font-size: 1.8rem;
+      }
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                   <img src="log.png" alt="logo" style="width: 60%;">
+                </a>
+                <div class="mobile-toggle">☰</div>
+                <nav>
+                    <ul>
+                      
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Driving Growth Through Innovation</h1>
+                <p>Join industry leaders and innovators for the premier technology and business event of the year. Network, learn, and discover the future of your industry.</p>
+                <a href="#registration" class="cta-button">Register Now</a>
+            </div>
+            
+            <div class="hero-graphics">
+                <div class="hero-circle"></div>
+                <div class="hero-circle"></div>
+                <div class="hero-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="countdown">
+    <div class="container">
+      <h1 style="font-size: 30px;">Event</h1>
+      <div class="countdown-container" id="countdown">
+        <div class="countdown-item">
+          <div class="countdown-value" id="days">01</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="hours">02</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="minutes">03</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="seconds">04</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Features Section -->
+   <section class="features" id="features">
+  <div class="container">
+    <div class="section-title">
+      <h2>Event Highlights</h2>
+      <p>Experience a day filled with knowledge sharing, networking, and insights from industry experts</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Expert Speakers</h3>
+        <p>Learn from industry experts and thought leaders who will share their insights, experiences, and vision for the future.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3>Networking</h3>
+        <p>Connect with professionals, entrepreneurs, and innovators from around the world to exchange ideas and build relationships.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💡</div>
+        <h3>Workshops</h3>
+        <p>Participate in hands-on workshops designed to enhance your skills and provide practical knowledge you can apply immediately.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Innovation Showcase</h3>
+        <p>Explore cutting-edge products and services from leading companies and promising startups in our exhibition area.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Case Studies</h3>
+        <p>Dive deep into real-world success stories and learn how industry leaders overcome challenges and achieve growth.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎉</div>
+        <h3>After-Party</h3>
+        <p>Continue networking at our exclusive after-party, featuring entertainment, refreshments, and more opportunities to connect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-------------------------------speakers--------------------------->
+ <div class="container">
+    <div class="section-header">
+      <span>Angels</span>
+      <h2>Event Speakers</h2>
+    </div>
+
+    <div class="speakers-grid">
+      <!-- Speaker 1 -->
+      <div class="speaker-card">
+        <div class="speaker-image">
+          <img src="speaker_1.png" alt="James D. Franklin">
+        </div>
+        <div class="speaker-info">
+          <h3>James D. Franklin</h3>
+          <p>Founder & CEO</p>
+          <div class="company">Fire Epic Ltd.</div>
+          <div class="social-links">
+             <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <span class="role">Content Writer</span>
+        </div>
+      </div>
+
+      <!-- Speaker 2 -->
+      <div class="speaker-card">
+        <div class="speaker-image">
+          <img src="speaker_2.png" alt="Natosha W. Green">
+        </div>
+        <div class="speaker-info">
+          <h3>Natosha W. Green</h3>
+          <p>Founder & CEO</p>
+          <div class="company">Fire Epic Ltd.</div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <span class="role">Content Writer</span>
+        </div>
+      </div>
+
+      <!-- Speaker 3 -->
+      <div class="speaker-card">
+        <div class="speaker-tag">Gold</div>
+        <div class="speaker-image">
+          <img src="speaker_3.png" alt="Brian J. Swanson">
+        </div>
+        <div class="speaker-info">
+          <h3>Brian J. Swanson</h3>
+          <p>Founder & CEO</p>
+          <div class="company">Fire Epic Ltd.</div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <span class="role">Content Writer</span>
+        </div>
+      </div>
+
+      <!-- Speaker 4 -->
+      <div class="speaker-card">
+        <div class="speaker-image">
+          <img src="speaker_4.png" alt="Stephanie D. Gray">
+        </div>
+        <div class="speaker-info">
+          <h3>Stephanie D. Gray</h3>
+          <p>Founder & CEO</p>
+          <div class="company">Fire Epic Ltd.</div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <span class="role">Content Writer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Sponsors Section -->
+    <section class="sponsors" id="sponsors">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Partners & Sponsors</h2>
+                <p>We're proud to collaborate with these industry-leading companies</p>
+            </div>
+            <div class="sponsors-grid">
+                <div class="sponsor-logo"><img style="width: 50px;" src="sponsor1.png"></div>
+                <div class="sponsor-logo"><img style="width: 50px;" src="sponsor2.png"></div>
+                <div class="sponsor-logo"><img style="width: 50px;" src="sponsor3.png"></div>
+                <div class="sponsor-logo"><img style="width: 50px;" src="sponsor4.png"></div>
+                <div class="sponsor-logo"><img style="width: 50px;" src="sponsor5.png"></div>
+                <div class="sponsor-logo"><img style="width: 50px;" src="sponsor1.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration" id="registration">
+        <div class="container">
+            <div class="section-title">
+                <h2>Register for the Event</h2>
+                <p>Secure your spot at the Industry Innovation Summit 2025</p>
+            </div>
+            
+            <div class="form-container">
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
+                    
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Personal</div>
+                    </div>
+                    
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Professional</div>
+                    </div>
+                    
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Preferences</div>
+                    </div>
+                    
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Confirmation</div>
+                    </div>
+                </div>
+                
+                <form id="registration-form">
+                    <!-- Stage 1: Personal Information -->
+                    <div class="form-stage active" data-stage="1">
+                        <h3>Personal Information</h3>
+                        <p style="margin-bottom: 24px; color: var(--text-light);">Please enter your contact details</p>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="input-group form-group">
+                                    <input type="text" id="first-name" class="form-control" placeholder=" " required>
+                                    <label for="first-name">First Name</label>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="input-group form-group">
+                                    <input type="text" id="last-name" class="form-control" placeholder=" " required>
+                                    <label for="last-name">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group form-group">
+                            <input type="email" id="email" class="form-control" placeholder=" " required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        
+                        <div class="input-group form-group">
+                            <input type="tel" id="phone" class="form-control" placeholder=" " required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        
+                        <div class="form-nav">
+                            <div></div> <!-- Empty div for spacing -->
+                            <button type="button" class="btn-next" data-next="2">Continue</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage 2: Professional Information -->
+                    <div class="form-stage" data-stage="2">
+                        <h3>Professional Information</h3>
+                        <p style="margin-bottom: 24px; color: var(--text-light);">Tell us about your work</p>
+                        
+                        <div class="input-group form-group">
+                            <input type="text" id="company" class="form-control" placeholder=" " required>
+                            <label for="company">Company Name</label>
+                        </div>
+                        
+                        <div class="input-group form-group">
+                            <input type="text" id="job-title" class="form-control" placeholder=" " required>
+                            <label for="job-title">Job Title</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="industry">Industry</label>
+                            <select id="industry" class="form-control" required>
+                                <option value="">-- Select Industry --</option>
+                                <option value="technology">Technology</option>
+                                <option value="finance">Finance</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="education">Education</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="retail">Retail</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-nav">
+                            <button type="button" class="btn-prev" data-prev="1">Previous</button>
+                            <button type="button" class="btn-next" data-next="3">Continue</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage 3: Preferences -->
+                    <div class="form-stage" data-stage="3">
+                        <h3>Preferences</h3>
+                        <p style="margin-bottom: 24px; color: var(--text-light);">Select your ticket and interests</p>
+                        
+                        <div class="form-group">
+                            <label>Select Ticket Type</label>
+                            <div class="ticket-options">
+                                <div class="ticket-option" data-ticket="standard">
+                                    <input type="radio" name="ticket-type" id="ticket-standard" class="ticket-radio" value="standard" required>
+                                    <div class="ticket-option-header">
+                                        <span class="ticket-name">Standard</span>
+                                        <span class="ticket-price">$499</span>
+                                    </div>
+                                    <p class="ticket-desc">Access to all keynote sessions and exhibition area</p>
+                                </div>
+                                
+                                <div class="ticket-option" data-ticket="premium">
+                                    <input type="radio" name="ticket-type" id="ticket-premium" class="ticket-radio" value="premium">
+                                    <div class="ticket-option-header">
+                                        <span class="ticket-name">Premium</span>
+                                        <span class="ticket-price">$799</span>
+                                    </div>
+                                    <p class="ticket-desc">Standard benefits plus workshops and networking lunch</p>
+                                </div>
+                                
+                                <div class="ticket-option" data-ticket="vip">
+                                    <input type="radio" name="ticket-type" id="ticket-vip" class="ticket-radio" value="vip">
+                                    <div class="ticket-option-header">
+                                        <span class="ticket-name">VIP</span>
+                                        <span class="ticket-price">$1,299</span>
+                                    </div>
+                                    <p class="ticket-desc">All benefits plus exclusive events and VIP lounge access</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Interests (Select all that apply)</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="interest-tech">
+                                <label for="interest-tech">Technology & Innovation</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="interest-business">
+                                <label for="interest-business">Business Strategy</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="interest-marketing">
+                                <label for="interest-marketing">Marketing & Communication</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="interest-leadership">
+                                <label for="interest-leadership">Leadership & Management</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="interest-sustainability">
+                                <label for="interest-sustainability">Sustainability</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-nav">
+                            <button type="button" class="btn-prev" data-prev="2">Previous</button>
+                            <button type="button" class="btn-next" data-next="4">Continue</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage 4: Confirmation -->
+                    <div class="form-stage" data-stage="4">
+                        <h3>Confirm Registration</h3>
+                        <p style="margin-bottom: 24px; color: var(--text-light);">Review your information and complete registration</p>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for updates</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms" required>
+                                <label for="terms">I agree to the <a href="#" style="color: var(--primary);">terms and conditions</a></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-nav">
+                            <button type="button" class="btn-prev" data-prev="3">Previous</button>
+                            <button type="submit" class="btn-next">Complete Registration</button>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Success Message -->
+                <div class="success-message" id="success-message">
+                    <div class="success-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h3 class="success-title">Registration Successful!</h3>
+                    <p class="success-desc">Thank you for registering for the Industry Innovation Summit 2025. A confirmation email has been sent to your inbox with all the details.</p>
+                    <button class="btn-next" onclick="window.location.reload()">Register Another Person</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Event Info</h3>
+                    <ul>
+                        <li><a href="#">About the Event</a></li>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">Speakers</a></li>
+                        <li><a href="#">Venue</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Become a Sponsor</a></li>
+                        <li><a href="#">Become a Speaker</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>contact@event2025.com</li>
+                        <li>+1 (123) 456-7890</li>
+                        <li>123 Event Street, City, Country</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Industry Innovation Summit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+      </script>
+
+
+<script>
+    // Set your event date here
+const eventDate = new Date("2025-12-31T23:59:59").getTime();
+
+function updateElement(id, newValue) {
+  const el = document.getElementById(id);
+  const formatted = newValue < 10 ? `0${newValue}` : `${newValue}`;
+
+  if (el.textContent !== formatted) {
+    el.classList.add("flip");
+    setTimeout(() => {
+      el.textContent = formatted;
+      el.classList.remove("flip");
+    }, 250); // Flip mid-way
+  }
+}
+
+const countdownInterval = setInterval(() => {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  if (distance < 0) {
+    clearInterval(countdownInterval);
+    document.getElementById("countdown").innerHTML = "<h3>Event Started!</h3>";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  updateElement("days", days);
+  updateElement("hours", hours);
+  updateElement("minutes", minutes);
+  updateElement("seconds", seconds);
+}, 1000);
+
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".feature-card");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sponsorLogos = document.querySelectorAll(".sponsor-logo");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sponsorLogos.forEach(logo => observer.observe(logo));
+  });
+</script>
+
+
+
+
+ <script>
+        // Animate form groups on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const formGroups = document.querySelectorAll('.form-group');
+            formGroups.forEach((group, index) => {
+                group.style.animation = `fadeInUp 0.5s ${0.4 + index * 0.1}s forwards`;
+            });
+            
+            // Set up ticket options
+            const ticketOptions = document.querySelectorAll('.ticket-option');
+            ticketOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    ticketOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Check the radio button
+                    const radio = this.querySelector('.ticket-radio');
+                    radio.checked = true;
+                });
+            });
+            
+            // Multi-step form navigation
+            const nextButtons = document.querySelectorAll('.btn-next[data-next]');
+            const prevButtons = document.querySelectorAll('.btn-prev[data-prev]');
+            const steps = document.querySelectorAll('.step');
+            const stages = document.querySelectorAll('.form-stage');
+            const progressBar = document.getElementById('progress-bar');
+            
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const nextStage = this.getAttribute('data-next');
+                    
+                    // Basic validation for current stage
+                    const currentStage = document.querySelector('.form-stage.active');
+                    const currentStageInputs = currentStage.querySelectorAll('input[required], select[required]');
+                    let isValid = true;
+                    
+                    currentStageInputs.forEach(input => {
+                        if (!input.value) {
+                            input.style.borderColor = 'var(--secondary)';
+                            isValid = false;
+                        } else {
+                            input.style.borderColor = 'var(--border)';
+                        }
+                    });
+                    
+                    if (!isValid) return;
+                    
+                    // Update active stage
+                    stages.forEach(stage => {
+                        stage.classList.remove('active');
+                    });
+                    
+                    document.querySelector(`.form-stage[data-stage="${nextStage}"]`).classList.add('active');
+                    
+                    // Update steps
+                    steps.forEach(step => {
+                        const stepNumber = step.getAttribute('data-step');
+                        if (stepNumber < nextStage) {
+                            step.classList.add('completed');
+                            step.classList.remove('active');
+                        } else if (stepNumber === nextStage) {
+                            step.classList.add('active');
+                        } else {
+                            step.classList.remove('active', 'completed');
+                        }
+                    });
+                    
+                    // Update progress bar
+                    const progress = ((nextStage - 1) / (steps.length - 1)) * 100;
+                    progressBar.style.width = `${progress}%`;
+                });
+            });
+            
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const prevStage = this.getAttribute('data-prev');
+                    
+                    // Update active stage
+                    stages.forEach(stage => {
+                        stage.classList.remove('active');
+                    });
+                    
+                    document.querySelector(`.form-stage[data-stage="${prevStage}"]`).classList.add('active');
+                    
+                    // Update steps
+                    steps.forEach(step => {
+                        const stepNumber = step.getAttribute('data-step');
+                        if (stepNumber < prevStage) {
+                            step.classList.add('completed');
+                            step.classList.remove('active');
+                        } else if (stepNumber === prevStage) {
+                            step.classList.add('active');
+                        } else {
+                            step.classList.remove('active', 'completed');
+                        }
+                    });
+                    
+                    // Update progress bar
+                    const progress = ((prevStage - 1) / (steps.length - 1)) * 100;
+                    progressBar.style.width = `${progress}%`;
+                });
+            });
+            
+            // Form submission
+            const form = document.getElementById('registration-form');
+            const successMessage = document.getElementById('success-message');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission (add your actual submission logic here)
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Processing...';
+                
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    document.querySelector('.progress-container').style.display = 'none';
+                    successMessage.classList.add('active');
+                }, 1500);
+            });
+        });
+    </script>
+
+
+
+
+ <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.speaker-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+
+      </body>
+
+</html>
